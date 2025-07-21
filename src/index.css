@@ -1,0 +1,20 @@
+    @import "tailwindcss";
+    @font-face {
+        font-family: anzo1;
+        src: url(./assets/file.woff2)
+    }
+    
+    @font-face {
+        font-family: anzo2;
+        src: url(./assets/file1.woff2);
+    }
+    
+    @font-face {
+        font-family: anzo3;
+        src: url(./assets/file2.woff2);
+    }
+    
+    html,
+    body {
+        color: white;
+    }
