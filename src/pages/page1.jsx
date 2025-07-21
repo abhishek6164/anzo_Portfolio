@@ -1,11 +1,12 @@
 import TiltText from '../components/TiltText';
 import Page1Bottom from '../components/Page1Bottom';
+import { useRef } from 'react';
 
 const Page1 = () => {
 
-  
-
+  const tiltRef = useRef(null)
   const mouseMoving = (e) => {
+
     console.log('Mouse moved:', e.clientX, e.clientY);
 
   };
@@ -30,7 +31,7 @@ const Page1 = () => {
           alt=""
         />
 
-        <div className='mt-40'>
+        <div ref={tiltRef} id='tiltDiv' className='mt-40'>
           <h1 className='text-[4.2vw] leading-[4vw] uppercase font-[anzo2]'>I am <span className='text-gray-900'>DARK MODE</span>™</h1>
           <h1 className='text-[8vw] leading-[7vw] font-[anzo2]'>DESIGNER</h1>
           <h1 className='text-[4.2vw] leading-[4vw] uppercase font-[anzo2]'>TO Hire</h1>
