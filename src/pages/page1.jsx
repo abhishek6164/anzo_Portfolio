@@ -3,8 +3,11 @@ import Page1Bottom from '../components/Page1Bottom';
 
 const Page1 = () => {
 
+  
+
   const mouseMoving = (e) => {
     console.log('Mouse moved:', e.clientX, e.clientY);
+
   };
 
   return (
@@ -26,7 +29,12 @@ const Page1 = () => {
           src="https://static.wixstatic.com/media/f1c650_88a2ca4f663c44a3a6c61d8c7bcb0e7a~mv2.png"
           alt=""
         />
-        <TiltText />
+
+        <div className='mt-40'>
+          <h1 className='text-[4.2vw] leading-[4vw] uppercase font-[anzo2]'>I am <span className='text-gray-900'>DARK MODE</span>™</h1>
+          <h1 className='text-[8vw] leading-[7vw] font-[anzo2]'>DESIGNER</h1>
+          <h1 className='text-[4.2vw] leading-[4vw] uppercase font-[anzo2]'>TO Hire</h1>
+        </div>
         <Page1Bottom />
       </div>
     </div>
