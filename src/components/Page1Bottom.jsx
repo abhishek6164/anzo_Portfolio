@@ -1,6 +1,16 @@
+import { useGSAP } from '@gsap/react'
 import React from 'react'
-
+import gsap from 'gsap'
 const Page1Bottom = () => {
+
+  useGSAP(function() {
+    gsap.to('#banner img',{
+      rotate: 360,
+      duration: 5,
+      repeat: -1,
+      ease: 'linear',
+    })
+  }, [])
   return (
     <div className='absolute bottom-10 w-[1450px] p-4  flex justify-between '>
       <div className=' text-xl font-[anzo2]'>
@@ -9,7 +19,7 @@ const Page1Bottom = () => {
         <h3 className='text-gray-400'>BE SPOKE FREELANCE</h3>
       </div>
 
-      <div>
+      <div id='banner'>
         <img className='h-18' src="https://static.wixstatic.com/media/f1c650_ed71078001ef401889b71537cca76dc4~mv2.png/v1/fill/w_89,h_89,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/cssda-wotd-white.png" alt="" />
       </div>
 

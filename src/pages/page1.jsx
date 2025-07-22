@@ -1,23 +1,35 @@
 import TiltText from '../components/TiltText';
 import Page1Bottom from '../components/Page1Bottom';
-import { useRef } from 'react';
-
+import { useRef , useState } from 'react';
+import { useGSAP } from '@gsap/react';
+import gsap from 'gsap';
 const Page1 = () => {
 
   const tiltRef = useRef(null)
+  const [xVal,setXVal] = useState(0);
+  const [yVal,setYVal] = useState(0); 
+
   const mouseMoving = (e) => {
-
-    console.log('Mouse moved:', e.clientX, e.clientY);
-
+    setXVal((e.clientX - tiltRef.current.getBoundingClientRect().x - tiltRef.current.getBoundingClientRect().width/2)/50)
+    setYVal((e.clientY - tiltRef.current.getBoundingClientRect().y - tiltRef.current.getBoundingClientRect().height/2)/15)
+    tiltRef.current.style.transform = `rotateX(${yVal}deg) rotateY(${xVal}deg)`;
   };
+
+  useGSAP(function(){
+    gsap.to(tiltRef.current, {
+      transform:`rotateX(${yVal}deg) rotateY(${xVal}deg)`,
+      duration:3,
+      ease: 'elastic.out(1, 0.3),',
+    })
+  },[xVal, yVal]);
 
   return (
     <div
-      onMouseMove={mouseMoving}
+      onMouseMove={(e) => { mouseMoving(e) }}
       className="h-screen p-4 bg-white"
       style={{ position: 'relative' }}
     >
-      <div
+      <div id='page1-in'
         className="shadow-xl p-10 shadow-gray-700 h-full w-full bg-cover bg-center rounded-[50px]"
         style={{
           backgroundImage:

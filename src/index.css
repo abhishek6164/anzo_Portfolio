@@ -19,12 +19,11 @@
         color: white;
     }
     
-    #tiltDiv {
-        background-color: red;
-        width: fit-content;
-        transform: rotateX(20deg);
+    #page1-in {
+        position: relative;
+        perspective: 1500px;
     }
     
-    #main {
-        perspective: 100px;
+    #tiltDiv {
+        width: fit-content;
     }
