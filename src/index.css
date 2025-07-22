@@ -1,29 +1,38 @@
-    @import "tailwindcss";
-    @font-face {
-        font-family: anzo1;
-        src: url(./assets/file.woff2)
-    }
-    
-    @font-face {
-        font-family: anzo2;
-        src: url(./assets/file1.woff2);
-    }
-    
-    @font-face {
-        font-family: anzo3;
-        src: url(./assets/file2.woff2);
-    }
-    
-    html,
-    body {
-        color: white;
-    }
-    
-    #page1-in {
-        position: relative;
-        perspective: 1500px;
-    }
-    
-    #tiltDiv {
-        width: fit-content;
-    }
+@import "tailwindcss";
+@font-face {
+    font-family: anzo1;
+    src: url(./assets/file.woff2)
+}
+
+@font-face {
+    font-family: anzo2;
+    src: url(./assets/file1.woff2);
+}
+
+@font-face {
+    font-family: anzo3;
+    src: url(./assets/file2.woff2);
+}
+
+html,
+body {
+    color: white;
+}
+
+#page1-in {
+    position: relative;
+    perspective: 1500px;
+}
+
+#section2 {
+    position: relative;
+    perspective: 4000px;
+}
+
+#tiltDiv {
+    width: fit-content;
+}
+
+.rotateText {
+    transform-origin: 100% 60%;
+}
