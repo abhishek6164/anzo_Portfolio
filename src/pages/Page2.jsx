@@ -56,7 +56,7 @@ const Page2 = () => {
         </div>
       ))}
 
-      <div className='text-center justify-center flex  mt-20'>
+      <div className='mt-20 text-center justify-center flex scale-75'>
         <div data-testid="svgRoot-comp-lmynz5gu2" className="VDJedC l4CAhn">
           <svg preserveAspectRatio="xMidYMid meet" data-bbox="0 0 2028.339 83" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 2028.339 83" height="" width="1200" data-type="color" role="img" aria-label="Minimal monochrome UX/UI design for a startup website by Anzo Studio."><defs><style>{`#comp-lmynz5gu2 svg [data-color="1"] {fill: #060606;}`}</style></defs>
             <g>
@@ -90,6 +90,10 @@ const Page2 = () => {
           </svg>
         </div>
       </div>
+
+
+
+      <div className='mt-18 h-1 w-1/4 relative left-1/2 -translate-x-1/2 bg-black'> </div>
     </div>
 
   )
